@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-02-20T00:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Design critiques are loaded with BS, and that’s OK</title>
+    <link rel="alternate" href="/blog/2013/02/20/design-critiques-are-loaded-with-bs-and-thats-ok.html"/>
+    <id>/blog/2013/02/20/design-critiques-are-loaded-with-bs-and-thats-ok.html</id>
+    <published>2013-02-20T00:00:00Z</published>
+    <updated>2013-02-20T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I’m currently reading Jonathon Haidt’s &lt;a href='http://www.amazon.com/The-Righteous-Mind-Politics-ebook/dp/B0052FF7YM/ref=sr_1_1?s=digital-text&amp;amp;ie=UTF8&amp;amp;qid=1361423547&amp;amp;sr=1-1&amp;amp;keywords=the+righteous+mind'&gt;&lt;em&gt;The Righteous Mind&lt;/em&gt;&lt;/a&gt;. It’s a book about morality and politics, but it is challenging some of my long-held conceptions about the design process, particularly critiques.&lt;/p&gt;
+
+&lt;p&gt;In the first segment of the book, Haidt makes a compelling argument that judgement and justification are two separate processes. Judgment is immediate and intuitive, and whether we choose to believe it, justification comes only after we’ve made our intuitive response to something. As he states it succinctly Intuitions come first, strategic reasoning second.&lt;/p&gt;
+
+&lt;p&gt;This has some pretty profound implications for design critique. No matter how much we try to rationally analyze whether a design solves a given problem, we are actually going to judge it first on an intuitive level. When we analyze it’s effectiveness, we will inevitably come up with reasons that justify our our initial intuitive reaction.&lt;/p&gt;
+
+&lt;p&gt;I see a lot of this evident in the discourse surrounding flat vs. skeurmorphic design. I think a lot of designers are just tired of the detailed aesthetic that has dominated product and web design for so many years. They are eager to explore a new aesthetic and they justify the new trend as more honest to the medium, or more virtuous in its simplicity.&lt;/p&gt;
+
+&lt;p&gt;As I first grappled with this notion, I was a bit disheartened. After all, I greatly value the dialogue inherent in design critique. I’ve always believed that if you involve the right people in critique, you end up with better design. As the first designer at a several startups, I often lamented how hard it was to do my best design work in isolation. Does the fact that critique is justification of foregone conclusions make it worthless? In other words, is critical analysis of design just a load of BS to support personal biases? Maybe so, but maybe that’s ok.&lt;/p&gt;
+
+&lt;p&gt;Haidt points out that reasoning and justification serve an important purpose:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Intuitions come first and reasoning is usually produced after a judgment is made, in order to influence other people. But as a discussion progresses, the reasons given by other people sometimes change our intuitions and judgments.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, perhaps critical analysis is the mechanism by which good taste can spread between designers. Taste is ephemeral, subjective, and highly intuitive. It’s hard to teach or share an intuition, but through critique, we can use justification to influence others and maybe spread good taste.&lt;/p&gt;
+
+&lt;p&gt;Of course, there is a danger here. The intuitions that spread most successfully may come from the most effective arguers, rather than the designers with the best taste. But there really isn’t another mechanism for sharing intuition, and if designers are cognizant of the pitfalls, we can apply an appropriate filter when accepting feedback from more or less persuasive personalities.&lt;/p&gt;
+
+&lt;p&gt;I’d love to hear other designers thoughts and experiences with critique. Have you ever been caught without justification for your intuition? Has anyone ever changed your mind about one of your own designs?&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Design is Life or Death</title>
+    <link rel="alternate" href="/blog/2012/06/13/design-is-life-or-death.html"/>
+    <id>/blog/2012/06/13/design-is-life-or-death.html</id>
+    <published>2012-06-13T00:00:00Z</published>
+    <updated>2012-06-13T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;As I was out running the other day, I saw a sandwich board propped up in the middle of the road that read “Car Wash for Food Pantry”. The message was written in large, outlined, bubble letters, and I squinted to read it from just a couple of car-lengths away.&lt;/p&gt;
+
+&lt;p&gt;My design instinct immediately kicked in, as I determined that none of the cars on the road could read this sign in time to make a decision about whether to stop at the car wash. It was obvious that they should fill in the bubble letters, and make them much darker. I next realized that this bad design decision was probably impacting how much money they would raise, and given the cause, it might mean that some family would go hungry.&lt;/p&gt;
+
+&lt;p&gt;Design is not about making something look good. Design drives behavior - it can secure an advantage for your business or put food in the mouth of a hungry child. The design of the world around us shapes the events of our lives, and can even make the difference between life or death.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Contemplation, Analysis and Kool-Aid</title>
+    <link rel="alternate" href="/blog/2012/04/30/contemplation-analysis-and-kool-aid.html"/>
+    <id>/blog/2012/04/30/contemplation-analysis-and-kool-aid.html</id>
+    <published>2012-04-30T00:00:00Z</published>
+    <updated>2012-04-30T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This site is a public forum for me to contemplate design, analyze product management, and drink delicious startup Kool Aid. This first post is mostly a stand-in, while I get familiar with Middleman&amp;#8217;s template tools. At least it’s a bit more engaging than lorem ipsum (if only a bit).&lt;/p&gt;</content>
+  </entry>
+</feed>
