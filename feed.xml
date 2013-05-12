@@ -41,6 +41,68 @@
 &lt;p&gt;I’d love to hear other designers thoughts and experiences with critique. Have you ever been caught without justification for your intuition? Has anyone ever changed your mind about one of your own designs?&lt;/p&gt;</content>
   </entry>
   <entry>
+    <title>How to get designers to make your open source project awesome</title>
+    <link rel="alternate" href="/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html"/>
+    <id>/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html</id>
+    <published>2012-09-16T00:00:00Z</published>
+    <updated>2012-09-16T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Like many designers, I use open source software, believe in the open source ethos, and would love to help make open source software look better and be easier to use. A lot of open-source projects are focused on the back-end, and don’t require a ton of UI/UX design, but it seems that there are more web apps popping up these days.&lt;/p&gt;
+
+&lt;p&gt;I had the good fortune to get involved with the Brainiac project recently, and wanted to share some of the hurdles I faced as a designer getting involved in the project. If you can address these things on your open source project, you stand a much better chance of getting designers and front-end developers to contribute.&lt;/p&gt;
+
+&lt;h3 id='make_it_easy_to_install'&gt;Make it easy to install&lt;/h3&gt;
+
+&lt;p&gt;A lot of designers can hack CSS and HTML, and even work with layouts in various frameworks like Rails. However, to start working with those parts of your app, they have to get the entire thing to boot up locally. Make it easy, and offer step-by-step instructions. When I started working on Brainiac, I asked a developer “How do I get this running?”, to which he replied “oh, it’s a Leiningen app”. That didn’t mean anything to me, and left me feeling embarrassed about asking further questions. What I really needed was for him to lay out the handful of steps necessary to get the server running locally. I did get these for Brainiac, and then I added them to the project’s readme. Be a Pal&lt;/p&gt;
+
+&lt;p&gt;If a designer takes an interest in your project, be a friend. Help them with technical issues. Figure out which dev tasks are blocking them. Great product companies have designers working side-by-side with developers to collaborate. When the designer or front-end dev gets stuck on something technical, they can call on a more-technical developer to help them get unstuck. I can see how this is tricky for highly distributed development projects, which brings me to the next point.&lt;/p&gt;
+
+&lt;h3 id='keep_discussions_accessible'&gt;Keep Discussions Accessible&lt;/h3&gt;
+
+&lt;p&gt;Use GitHub Issues for project discussions. This will keep discussions accessible to everyone, which is important, because designers need a channel for requesting features and posting comps. IRC WTF? That was my reaction after downloading the very cool Brackets project, and attempting to contribute. Their thorough installation instructions made it a breeze to install, but their project readme directed me to Freenode’s home page for Q&amp;amp;A. From there, I had no idea how to get onto the #brackets channel. Even though I’m aware that IRC is for chat, I wasn’t sure if I needed a client program or if it should work in my browser, and lost interest before I spent the time to figure it out. More explicit instructions for how to get going on the #brackets IRC channel would have helped here.&lt;/p&gt;
+
+&lt;p&gt;Make sure your views don’t require a CS degree to edit&lt;/p&gt;
+
+&lt;p&gt;Designers are getting more technical all the time, but you still need build your app in a way that takes designers into account. HTML, CSS, and (to a lesser extant) Javascript are the lingua franca of UI design. There’s certainly nothing wrong with working some SCSS into the mix, but when you start using using a lot of the backend programming language (i.e. Ruby/Java/Clojure) in your views, you’re turning a markup exercise into a programming excercise. You’ll lose a huge chunk of potential contributors, right out of the gates. Even the ones who soldier on and try to learn the language will find themselves stuck often. If they don’t have a pal (see above) they are likely to give up.&lt;/p&gt;
+
+&lt;p&gt;Wrapping up&lt;/p&gt;
+
+&lt;p&gt;My first foray into open source software development has been tremendously gratifying. Despite a hitting a few roadblocks, I’ve learned a ton, and have helped a great new product enter the world. I’m looking forward to continuing my involvement with Brainiac, as well as finding new projects to work on.&lt;/p&gt;
+
+&lt;p&gt;I’m interested in hearing from anyone who knows of projects that have done a good job engaging with designers, and I would love to hear from other designers who have waded into the open source world. Please comment below, or find me at michael@michaelboeke.com or @mvboeke.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>UI Anti-patterns: mixing status and action</title>
+    <link rel="alternate" href="/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html"/>
+    <id>/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html</id>
+    <published>2012-07-31T00:00:00Z</published>
+    <updated>2012-07-31T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;One of the things I’d like to explore on this blog are some of the common UI anti-patterns I see while designing software.&lt;/p&gt;
+
+&lt;p&gt;For example take a look at this picture from the very cool Jukebox 2 open source project. At a glance, it looks like most of the accounts are disabled.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Users' src='/images/blog/users.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Surprise! The reverse is actually true. The problem is that the UI control for disabling an account seems to be displaying its state. This is totally confusing for the viewer, because it’s actually showing the state the account will be in once the users clicks the button.&lt;/p&gt;
+
+&lt;p&gt;I’m not trying to pick on the folks who contributed to Jukebox 2, as I’ve seen this same anti-pattern pop up on almost every project I’ve worked on that features tables with actions. The consequences for the user can be pretty drastic - in one instance when this anti-pattern was used for setting access permissions on a site with sensitive personal information, a user freaked out and locked everyone out of the site.&lt;/p&gt;
+
+&lt;p&gt;So what’s the better way to handle this? Much of the time, the action is a binary flag, so an On/Off switch is a natural metaphor. It can convey current state explicitly without the need to even display the action, since its implied by the very nature of the switch. The above example might look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Switches' src='/images/blog/switches.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s better, but we could help the viewer to better understand which users are enabled at a glance. In order to avoid confusion, we’ll use some styling on the row to signify a disabled user with gray text and a desaturated avatar photo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Disabled users' src='/images/blog/disabled_users.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s a big improvement in usability, without a lot of development work. The next time you find yourself adding and “Actions” column to a table, do your users a favor and give this a try.&lt;/p&gt;</content>
+  </entry>
+  <entry>
     <title>Design is Life or Death</title>
     <link rel="alternate" href="/blog/2012/06/13/design-is-life-or-death.html"/>
     <id>/blog/2012/06/13/design-is-life-or-death.html</id>

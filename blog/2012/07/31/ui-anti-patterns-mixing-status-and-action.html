@@ -35,22 +35,27 @@
     <div class="small-12 large-8 small-centered columns" role="content">
 
       <article id="bingo">
-	<h2></h2>
-	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on </h6>
-	<h1>Archive for
-  
-    Jun 13 2012
-  
-</h1>
+	<h2>UI Anti-patterns: mixing status and action</h2>
+	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on 2012-07-31</h6>
+	<p>One of the things I’d like to explore on this blog are some of the common UI anti-patterns I see while designing software.</p>
 
+<p>For example take a look at this picture from the very cool Jukebox 2 open source project. At a glance, it looks like most of the accounts are disabled.</p>
 
-<ul>
-  
-    <li><a href="/blog/2012/06/13/design-is-life-or-death.html">Design is Life or Death</a> <span>Jun 13</span></li>
-  
-</ul>
+<p><img alt='Users' src='/images/blog/users.png' /></p>
 
+<p>Surprise! The reverse is actually true. The problem is that the UI control for disabling an account seems to be displaying its state. This is totally confusing for the viewer, because it’s actually showing the state the account will be in once the users clicks the button.</p>
 
+<p>I’m not trying to pick on the folks who contributed to Jukebox 2, as I’ve seen this same anti-pattern pop up on almost every project I’ve worked on that features tables with actions. The consequences for the user can be pretty drastic - in one instance when this anti-pattern was used for setting access permissions on a site with sensitive personal information, a user freaked out and locked everyone out of the site.</p>
+
+<p>So what’s the better way to handle this? Much of the time, the action is a binary flag, so an On/Off switch is a natural metaphor. It can convey current state explicitly without the need to even display the action, since its implied by the very nature of the switch. The above example might look something like this:</p>
+
+<p><img alt='Switches' src='/images/blog/switches.png' /></p>
+
+<p>That’s better, but we could help the viewer to better understand which users are enabled at a glance. In order to avoid confusion, we’ll use some styling on the row to signify a disabled user with gray text and a desaturated avatar photo.</p>
+
+<p><img alt='Disabled users' src='/images/blog/disabled_users.png' /></p>
+
+<p>That’s a big improvement in usability, without a lot of development work. The next time you find yourself adding and “Actions” column to a table, do your users a favor and give this a try.</p>
 </article>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
