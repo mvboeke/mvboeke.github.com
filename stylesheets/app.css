@@ -15,7 +15,10 @@
 ----------------------------------------- */
 
 @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:700);
-h1, h2, h3, h4, h5, .button, .flying-b, .nav-bar, .short-bio { font-family:Ubuntu, helvetica, arial, sans-serif;}
+h1, h2, h3, h4, h5, .button, .flying-b, .nav-bar, .short-bio { 
+	font-family:Ubuntu, helvetica, arial, sans-serif;
+	text-align: center;
+	}
 body, h6 {font-family:Lora, Georgia, serif; margin:0; padding:0;}
 h6 {
 	font-style: italic;
@@ -23,16 +26,20 @@ h6 {
 	font-size:.9em;
 }
 h2 {
-	text-align: center;
+	
 	line-height: 1.25;
 	margin-top: .9em;
 	margin-bottom: 0.6em;
 	color: #bf0706;
 	}
+
 h6 {
 	text-align: center;
-	margin-bottom: 30px;
-	font-weight: normal;
+	font-weight: normal;	
+	font-family: 'Ubuntu';
+	text-transform: uppercase;
+	font-style: normal;
+	margin: 3em 0 0 0;
 	}
 p {
 	font-size: 1.25em;
@@ -63,6 +70,9 @@ p {
 	display: inline;
 	margin: 0 10px;
 	line-height: 1.8;
+	}
+	.nav-bar>li.active{
+	border-bottom: 1px solid #bf0706;
 	}
 .nav-bar>li:last-child {
 	margin-right: 0px;
@@ -138,7 +148,13 @@ footer {
 	display: inline;
 	margin-bottom: -8px;
 }
-
+/* -----------------------------------------
+	Archive
+------------------------------------------*/
+.continue-link {
+	font-style: italic;
+	text-align: center;
+}
 /* -----------------------------------------
    Article
 ----------------------------------------- */
@@ -166,6 +182,7 @@ footer {
 	font-weight: normal;
 	margin-top: 0;
 	margin-bottom: .1em;
+	text-align: left;
 }
 
 #events-page h6 {
@@ -203,6 +220,8 @@ footer {
 	border-radius:81px;
 	padding: 10px 0;
 	}
+
+
 /* -----------------------------------------
    About
 ----------------------------------------- */
