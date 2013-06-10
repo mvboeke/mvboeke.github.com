@@ -41,6 +41,79 @@
 &lt;p&gt;I’d love to hear other designers thoughts and experiences with critique. Have you ever been caught without justification for your intuition? Has anyone ever changed your mind about one of your own designs?&lt;/p&gt;</content>
   </entry>
   <entry>
+    <title>UI Antipatterns: Repeat Data Collection</title>
+    <link rel="alternate" href="/blog/2012/12/12/UI-Antipatterns-Repeat-Data-Collection.html"/>
+    <id>/blog/2012/12/12/UI-Antipatterns-Repeat-Data-Collection.html</id>
+    <published>2012-12-12T00:00:00Z</published>
+    <updated>2012-12-12T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This is an antipattern I’ve come across many times while working on financial software. It often occurs when a website is trying to present one form that will map to multiple systems, or will be used to replicate a physical form (e.g. a credit application). Few things are more frustrating to a user than having to fill out the same data multiple times. It adds no value, increases the likelihood of error, and causes people to tear their hair out.&lt;/p&gt;
+
+&lt;p&gt;For example, let’s take a look at the &lt;a href='http://www.active.com/framed/event_detail.cfm?EVENT_ID=2066969&amp;amp;RESET=0&amp;amp;CHECKSSO=0'&gt;&lt;em&gt;Active.com signup for the Shamrock Shuffle&lt;/em&gt;&lt;/a&gt; (a great springtime running race in Chicago). It starts off with just a few questions about my age. Thankfully, it calculates my age for me, based on my birthdate, but it won’t infer that I’m older than 16.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Repeat data collection' src='/images/blog/repeat_data_collection1.gif' /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I get to this next section, they’re asking for my birthdate again. They ask my age again too…except this time they don’t calculate it for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Repeat data collection' src='/images/blog/repeat_data_collection2.gif' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, when I get to step three, they ask me one more time if I’m 16 years or older, even though I’ve answered this very question already, and have given them my age and birthdate…twice. Yep, I’m still over 16!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Repeat data collection' src='/images/blog/repeat_data_collection3.gif' /&gt;&lt;/p&gt;
+
+&lt;p&gt;This redundancy is particularly frustrating for those of us who make software. We know it’s possible for the software to map one answer into multiple fields. When you have to collect a lot of data from a user, it’s easy to get focused on where the data is eventually going to live (e.g. in a form or another system) but if you want people to complete your form, you have to focus on the user instead.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>UI Antipatterns: Splitting Numbers</title>
+    <link rel="alternate" href="/blog/2012/11/28/ui-antipatterns-splitting-numbers.html"/>
+    <id>/blog/2012/11/28/ui-antipatterns-splitting-numbers.html</id>
+    <published>2012-11-28T00:00:00Z</published>
+    <updated>2012-11-28T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;When collecting a US phone number on a web form, it has become convention to collect it with three separate fields. This is meant to help the user successfully input the number in the format the server will accept. Since the user may think of the phone number as one piece of data, rather than three distinct items, many sites employ a feature that jumps the cursor to the next field as soon as it is filled with the expected numbers of characters.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Split phone number' src='/images/blog/split_numbers1.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;This will totally screw up a user like me, who is used to powering through web forms by hammering the tab key as soon as I complete a field. Which leads to the unfortunate situation illustrated below.&lt;/p&gt;
+
+&lt;p&gt;The good folks at Southwest Airlines have tried to help me by moving my cursor to the second field in the phone number, but I’ve already hit the tab key. So I’ve skipped the second field entirely and gone straight to the third. Doh. Hence, an antipattern.&lt;/p&gt;
+
+&lt;p&gt;Luckily, we are living in a grand age of Javascript wizardry. We can now format phone numbers on the fly with plugins like jQuery Format Phone or Masked Input Plugin. We can just let the user enter the number into the field naturally, including or not including special characters as they wish, and format the number for them as they type. The end result might look something like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Auto formatting phone number' src='/images/blog/split_numbers2.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;This particular antipattern shows up in more situations than just phone number fields. Social Security Numbers and other places where sites collect numbers that include dashes or other formatting are prone to fall into the same trap.&lt;/p&gt;
+
+&lt;p&gt;A single field is more natural for a user, and utilizing Javascript to format the field as the user types will ensure that it is formatted as expected for both the user and the server.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Sales Timelines Explained for Geeks</title>
+    <link rel="alternate" href="/blog/2012/11/01/sales-timelines-explained-for-geeks.html"/>
+    <id>/blog/2012/11/01/sales-timelines-explained-for-geeks.html</id>
+    <published>2012-11-01T00:00:00Z</published>
+    <updated>2012-11-01T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;When we were first starting up Backstop, we would watch eagerly as each new customer advanced through the sales pipeline, and tear our hair out as deals seemed to drag on forever. Years later, I still hear the development teams I work with at Braintree asking ”when will deal X be done?” So, I thought it might be useful to write down this explanation I came up with for that early Backstop dev team.&lt;/p&gt;
+
+&lt;p&gt;The best way for a geek to understand the situation is to think about the deal as an entity with a dual quantum nature, similar to light. It possess both the linear characteristics of a wave and some decidedly non-linear characteristics that suggest a particle nature.&lt;/p&gt;
+
+&lt;p&gt;In the early or middle phases of deal negotiation, things progress along a fairly linear and predictable path. All parties involved agree that they are headed for completion at a reasonably forseeable date.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Moving' src='/images/blog/deal_moving.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, near the end of the deal negotiation process, lawyers, bosses, procurement departments and other gatekeepers get involved. You can think about these gatekeepers as a reflective box with a diffraction grate on both sides. The wave-like deal hits the first diffraction grating, and it appears as if it should emerge out of the other side at a predictable point in time. However, once the gatekeepers get involved everything goes quantum. The deal takes on a particle nature, and those particles bounce around inside the box for an indeterminate duration, until one of them happens pop out of the slit on the other side. This is effectively random and can’t be predicted by any of the parties involved, much to the chagrin of everyone whose livelihood depends on the deal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Quantum' src='/images/blog/deal_quantum.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;What is to be done about this? Not much. Most sales and business development people know enough to try to skip the lawyers, or to at least get contracts in front of them as as early in the process as possible. For development teams, it’s best to realize that completing a deal is a lot like fixing a pernicious bug - it’s almost impossible to predict how long it will take. Embrace the truth that the deal is done when that particle randomly pops out the other side of the box and both sides put ink on paper.&lt;/p&gt;</content>
+  </entry>
+  <entry>
     <title>How to get designers to make your open source project awesome</title>
     <link rel="alternate" href="/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html"/>
     <id>/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html</id>
@@ -55,7 +128,9 @@
 
 &lt;h3 id='make_it_easy_to_install'&gt;Make it easy to install&lt;/h3&gt;
 
-&lt;p&gt;A lot of designers can hack CSS and HTML, and even work with layouts in various frameworks like Rails. However, to start working with those parts of your app, they have to get the entire thing to boot up locally. Make it easy, and offer step-by-step instructions. When I started working on Brainiac, I asked a developer “How do I get this running?”, to which he replied “oh, it’s a Leiningen app”. That didn’t mean anything to me, and left me feeling embarrassed about asking further questions. What I really needed was for him to lay out the handful of steps necessary to get the server running locally. I did get these for Brainiac, and then I added them to the project’s readme. Be a Pal&lt;/p&gt;
+&lt;p&gt;A lot of designers can hack CSS and HTML, and even work with layouts in various frameworks like Rails. However, to start working with those parts of your app, they have to get the entire thing to boot up locally. Make it easy, and offer step-by-step instructions. When I started working on Brainiac, I asked a developer “How do I get this running?”, to which he replied “oh, it’s a Leiningen app”. That didn’t mean anything to me, and left me feeling embarrassed about asking further questions. What I really needed was for him to lay out the handful of steps necessary to get the server running locally. I did get these for Brainiac, and then I added them to the project’s readme.&lt;/p&gt;
+
+&lt;h3 id='be_a_pal'&gt;Be a Pal&lt;/h3&gt;
 
 &lt;p&gt;If a designer takes an interest in your project, be a friend. Help them with technical issues. Figure out which dev tasks are blocking them. Great product companies have designers working side-by-side with developers to collaborate. When the designer or front-end dev gets stuck on something technical, they can call on a more-technical developer to help them get unstuck. I can see how this is tricky for highly distributed development projects, which brings me to the next point.&lt;/p&gt;
 
@@ -101,31 +176,5 @@
 &lt;p&gt;&lt;img alt='Disabled users' src='/images/blog/disabled_users.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;That’s a big improvement in usability, without a lot of development work. The next time you find yourself adding and “Actions” column to a table, do your users a favor and give this a try.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Design is Life or Death</title>
-    <link rel="alternate" href="/blog/2012/06/13/design-is-life-or-death.html"/>
-    <id>/blog/2012/06/13/design-is-life-or-death.html</id>
-    <published>2012-06-13T00:00:00Z</published>
-    <updated>2012-06-13T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;As I was out running the other day, I saw a sandwich board propped up in the middle of the road that read “Car Wash for Food Pantry”. The message was written in large, outlined, bubble letters, and I squinted to read it from just a couple of car-lengths away.&lt;/p&gt;
-
-&lt;p&gt;My design instinct immediately kicked in, as I determined that none of the cars on the road could read this sign in time to make a decision about whether to stop at the car wash. It was obvious that they should fill in the bubble letters, and make them much darker. I next realized that this bad design decision was probably impacting how much money they would raise, and given the cause, it might mean that some family would go hungry.&lt;/p&gt;
-
-&lt;p&gt;Design is not about making something look good. Design drives behavior - it can secure an advantage for your business or put food in the mouth of a hungry child. The design of the world around us shapes the events of our lives, and can even make the difference between life or death.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Contemplation, Analysis and Kool-Aid</title>
-    <link rel="alternate" href="/blog/2012/04/30/contemplation-analysis-and-kool-aid.html"/>
-    <id>/blog/2012/04/30/contemplation-analysis-and-kool-aid.html</id>
-    <published>2012-04-30T00:00:00Z</published>
-    <updated>2012-04-30T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;This site is a public forum for me to contemplate design, analyze product management, and drink delicious startup Kool Aid. This first post is mostly a stand-in, while I get familiar with Middleman&amp;#8217;s template tools. At least it’s a bit more engaging than lorem ipsum (if only a bit).&lt;/p&gt;</content>
   </entry>
 </feed>

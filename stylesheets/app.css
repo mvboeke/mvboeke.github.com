@@ -20,27 +20,20 @@ h1, h2, h3, h4, h5, .button, .flying-b, .nav-bar, .short-bio {
 	text-align: center;
 	}
 body, h6 {font-family:Lora, Georgia, serif; margin:0; padding:0;}
-h6 {
-	font-style: italic;
-	color:#323232;
-	font-size:.9em;
-}
 h2 {
 	
 	line-height: 1.25;
 	margin-top: .9em;
 	margin-bottom: 0.6em;
 	color: #bf0706;
-	}
-
-h6 {
+	}h6 {
 	text-align: center;
 	font-weight: normal;	
-	font-family: 'Ubuntu';
-	text-transform: uppercase;
-	font-style: normal;
-	margin: 3em 0 0 0;
-	}
+	font-style: italic;
+	color: #323232;
+	font-size: .9em;
+	margin-bottom: 2em;
+}
 p {
 	font-size: 1.25em;
 	line-height:1.7;
@@ -152,8 +145,15 @@ footer {
 	Archive
 ------------------------------------------*/
 .continue-link {
-	font-style: italic;
 	text-align: center;
+}
+
+#archive-page h6 {
+	margin: 3.5em 0 0 0;
+	letter-spacing: .1em;
+	font-family: 'Ubuntu';
+	text-transform: uppercase;
+	font-style: normal;
 }
 /* -----------------------------------------
    Article

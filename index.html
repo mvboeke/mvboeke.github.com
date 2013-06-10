@@ -38,41 +38,86 @@
   <h6>February 20, 2013</h6>
   <h3><a href="/blog/2013/02/20/design-critiques-are-loaded-with-bs-and-thats-ok.html">Design critiques are loaded with BS, and that’s OK</a></h3>
 <!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on February 20, 2013</h6> -->
-  <p>I’m currently reading Jonathon Haidt’s <a href="http://www.amazon.com/The-Righteous-Mind-Politics-ebook/dp/B0052FF7YM/ref=sr_1_1?s=digital-text&amp;ie=UTF8&amp;qid=1361423547&amp;sr=1-1&amp;keywords=the+righteous+mind"><em>The Righteous Mind</em></a>. It’s a book about morality and politics, but it is challenging some of my long-held conceptions about the design process, particularly critiques.</p>
+  <p>I’m currently reading Jonathon Haidt’s <a href='http://www.amazon.com/The-Righteous-Mind-Politics-ebook/dp/B0052FF7YM/ref=sr_1_1?s=digital-text&amp;ie=UTF8&amp;qid=1361423547&amp;sr=1-1&amp;keywords=the+righteous+mind'><em>The Righteous Mind</em></a>. It’s a book about morality and politics, but it is challenging some of my long-held conceptions about the design process, particularly critiques.</p>
 
-<p>In the first segment of the book, Haidt makes...</p>
+<p>In the first segment of the book, Haidt makes a compelling argument that judgement and justification are two separate processes. Judgment is immediate and intuitive, and whether we choose to believe it, justification comes only after we’ve made our intuitive response to something. As he states it succinctly Intuitions come first, strategic reasoning second.</p>
+
+<p>This has some pretty profound implications for design critique. No matter how much we try to rationally analyze whether a design solves a given problem, we are actually going to judge it first on an intuitive level. When we analyze it’s effectiveness, we will inevitably come up with reasons that justify our our initial intuitive reaction.
   <p class="continue-link">
-    <a href="/blog/2013/02/20/design-critiques-are-loaded-with-bs-and-thats-ok.html">Continue reading</a>
+    <a href="/blog/2013/02/20/design-critiques-are-loaded-with-bs-and-thats-ok.html">Continue reading →</a>
+  </p>
+  <h6>December 12, 2012</h6>
+  <h3><a href="/blog/2012/12/12/UI-Antipatterns-Repeat-Data-Collection.html">UI Antipatterns: Repeat Data Collection</a></h3>
+<!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on December 12, 2012</h6> -->
+  <p>This is an antipattern I’ve come across many times while working on financial software. It often occurs when a website is trying to present one form that will map to multiple systems, or will be used to replicate a physical form (e.g. a credit application). Few things are more frustrating to a user than having to fill out the same data multiple times. It adds no value, increases the likelihood of error, and causes people to tear their hair out.</p>
+
+<p>For example, let’s take a look at the <a href='http://www.active.com/framed/event_detail.cfm?EVENT_ID=2066969&amp;RESET=0&amp;CHECKSSO=0'><em>Active.com signup for the Shamrock Shuffle</em></a> (a great springtime running race in Chicago). It starts off with just a few questions about my age. Thankfully, it calculates my age for me, based on my birthdate, but it won’t infer that I’m older than 16.</p>
+
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection1.gif' />
+  <p class="continue-link">
+    <a href="/blog/2012/12/12/UI-Antipatterns-Repeat-Data-Collection.html">Continue reading →</a>
+  </p>
+  <h6>November 28, 2012</h6>
+  <h3><a href="/blog/2012/11/28/ui-antipatterns-splitting-numbers.html">UI Antipatterns: Splitting Numbers</a></h3>
+<!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on November 28, 2012</h6> -->
+  <p>When collecting a US phone number on a web form, it has become convention to collect it with three separate fields. This is meant to help the user successfully input the number in the format the server will accept. Since the user may think of the phone number as one piece of data, rather than three distinct items, many sites employ a feature that jumps the cursor to the next field as soon as it is filled with the expected numbers of characters.</p>
+
+<p><img alt='Split phone number' src='/images/blog/split_numbers1.png' /></p>
+
+<p>This will totally screw up a user like me, who is used to powering through web forms by hammering the tab key as soon as I complete a field. Which leads to the unfortunate situation illustrated below.</p>
+
+<p>The good folks at Southwest Airlines have tried to help me by moving my cursor to the second field in the phone number, but I’ve already hit the tab key. So I’ve skipped the second field entirely and gone straight to the third. Doh. Hence, an antipattern.
+  <p class="continue-link">
+    <a href="/blog/2012/11/28/ui-antipatterns-splitting-numbers.html">Continue reading →</a>
+  </p>
+  <h6>November  1, 2012</h6>
+  <h3><a href="/blog/2012/11/01/sales-timelines-explained-for-geeks.html">Sales Timelines Explained for Geeks</a></h3>
+<!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on November  1, 2012</h6> -->
+  <p>When we were first starting up Backstop, we would watch eagerly as each new customer advanced through the sales pipeline, and tear our hair out as deals seemed to drag on forever. Years later, I still hear the development teams I work with at Braintree asking ”when will deal X be done?” So, I thought it might be useful to write down this explanation I came up with for that early Backstop dev team.</p>
+
+<p>The best way for a geek to understand the situation is to think about the deal as an entity with a dual quantum nature, similar to light. It possess both the linear characteristics of a wave and some decidedly non-linear characteristics that suggest a particle nature.</p>
+
+<p>In the early or middle phases of deal negotiation, things progress along a fairly linear and predictable path. All parties involved agree that they are headed for completion at a reasonably forseeable date.
+  <p class="continue-link">
+    <a href="/blog/2012/11/01/sales-timelines-explained-for-geeks.html">Continue reading →</a>
   </p>
   <h6>September 16, 2012</h6>
   <h3><a href="/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html">How to get designers to make your open source project awesome</a></h3>
 <!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on September 16, 2012</h6> -->
-  <p>Like many designers, I use open source software, believe in the open source ethos, and would love to help make open source software look better and be easier to use. A lot of open-source projects are focused on the back-end, and don’t require a ton...</p>
+  <p>Like many designers, I use open source software, believe in the open source ethos, and would love to help make open source software look better and be easier to use. A lot of open-source projects are focused on the back-end, and don’t require a ton of UI/UX design, but it seems that there are more web apps popping up these days.</p>
+
+<p>I had the good fortune to get involved with the Brainiac project recently, and wanted to share some of the hurdles I faced as a designer getting involved in the project. If you can address these things on your open source project, you stand a much better chance of getting designers and front-end developers to contribute.
   <p class="continue-link">
-    <a href="/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html">Continue reading</a>
+    <a href="/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html">Continue reading →</a>
   </p>
   <h6>July 31, 2012</h6>
   <h3><a href="/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html">UI Anti-patterns: mixing status and action</a></h3>
 <!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on July 31, 2012</h6> -->
   <p>One of the things I’d like to explore on this blog are some of the common UI anti-patterns I see while designing software.</p>
 
-<p>For example take a look at this picture from the very cool Jukebox 2 open source project. At a glance, it looks like most of...</p>
+<p>For example take a look at this picture from the very cool Jukebox 2 open source project. At a glance, it looks like most of the accounts are disabled.</p>
+
+<p><img alt='Users' src='/images/blog/users.png' /></p>
+
+<p>Surprise! The reverse is actually true. The problem is that the UI control for disabling an account seems to be displaying its state. This is totally confusing for the viewer, because it’s actually showing the state the account will be in once the users clicks the button.
   <p class="continue-link">
-    <a href="/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html">Continue reading</a>
+    <a href="/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html">Continue reading →</a>
   </p>
   <h6>June 13, 2012</h6>
   <h3><a href="/blog/2012/06/13/design-is-life-or-death.html">Design is Life or Death</a></h3>
 <!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on June 13, 2012</h6> -->
-  <p>As I was out running the other day, I saw a sandwich board propped up in the middle of the road that read “Car Wash for Food Pantry”. The message was written in large, outlined, bubble letters, and I squinted to read it from just a couple of car-lengths away.
+  <p>As I was out running the other day, I saw a sandwich board propped up in the middle of the road that read “Car Wash for Food Pantry”. The message was written in large, outlined, bubble letters, and I squinted to read it from just a couple of car-lengths away.</p>
+
+<p>My design instinct immediately kicked in, as I determined that none of the cars on the road could read this sign in time to make a decision about whether to stop at the car wash. It was obvious that they should fill in the bubble letters, and make them much darker. I next realized that this bad design decision was probably impacting how much money they would raise, and given the cause, it might mean that some family would go hungry.
   <p class="continue-link">
-    <a href="/blog/2012/06/13/design-is-life-or-death.html">Continue reading</a>
+    <a href="/blog/2012/06/13/design-is-life-or-death.html">Continue reading →</a>
   </p>
   <h6>April 30, 2012</h6>
   <h3><a href="/blog/2012/04/30/contemplation-analysis-and-kool-aid.html">Contemplation, Analysis and Kool-Aid</a></h3>
 <!--  <h6>Hand crafted by <a href="/about">Michael Boeke</a> on April 30, 2012</h6> -->
   <p>This site is a public forum for me to contemplate design, analyze product management, and drink delicious startup Kool Aid. This first post is mostly a stand-in, while I get familiar with Middleman’s template tools. At least it’s a bit more engaging...</p>
   <p class="continue-link">
-    <a href="/blog/2012/04/30/contemplation-analysis-and-kool-aid.html">Continue reading</a>
+    <a href="/blog/2012/04/30/contemplation-analysis-and-kool-aid.html">Continue reading →</a>
   </p>
 
 

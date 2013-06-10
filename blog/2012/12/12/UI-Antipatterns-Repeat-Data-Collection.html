@@ -35,20 +35,23 @@
     <div class="small-12 large-8 small-centered columns" role="content">
 
       <article id="bingo">
-	<h2></h2>
-	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on </h6>
-	<h1>Articles tagged 'musings'</h1>
+	<h2>UI Antipatterns: Repeat Data Collection</h2>
+	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on 2012-12-12</h6>
+	<p>This is an antipattern I’ve come across many times while working on financial software. It often occurs when a website is trying to present one form that will map to multiple systems, or will be used to replicate a physical form (e.g. a credit application). Few things are more frustrating to a user than having to fill out the same data multiple times. It adds no value, increases the likelihood of error, and causes people to tear their hair out.</p>
 
+<p>For example, let’s take a look at the <a href='http://www.active.com/framed/event_detail.cfm?EVENT_ID=2066969&amp;RESET=0&amp;CHECKSSO=0'><em>Active.com signup for the Shamrock Shuffle</em></a> (a great springtime running race in Chicago). It starts off with just a few questions about my age. Thankfully, it calculates my age for me, based on my birthdate, but it won’t infer that I’m older than 16.</p>
 
-<ul>
-  
-    <li><a href="/blog/2012/11/01/sales-timelines-explained-for-geeks.html">Sales Timelines Explained for Geeks</a> <span>Nov  1</span></li>
-  
-    <li><a href="/blog/2012/04/30/contemplation-analysis-and-kool-aid.html">Contemplation, Analysis and Kool-Aid</a> <span>Apr 30</span></li>
-  
-</ul>
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection1.gif' /></p>
 
+<p>As I get to this next section, they’re asking for my birthdate again. They ask my age again too…except this time they don’t calculate it for me.</p>
 
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection2.gif' /></p>
+
+<p>Finally, when I get to step three, they ask me one more time if I’m 16 years or older, even though I’ve answered this very question already, and have given them my age and birthdate…twice. Yep, I’m still over 16!</p>
+
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection3.gif' /></p>
+
+<p>This redundancy is particularly frustrating for those of us who make software. We know it’s possible for the software to map one answer into multiple fields. When you have to collect a lot of data from a user, it’s easy to get focused on where the data is eventually going to live (e.g. in a form or another system) but if you want people to complete your form, you have to focus on the user instead.</p>
 </article>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
