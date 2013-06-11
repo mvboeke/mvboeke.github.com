@@ -5,10 +5,31 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-02-20T00:00:00Z</updated>
+  <updated>2013-03-07T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>UI Antipatterns: Hinting instead of acting</title>
+    <link rel="alternate" href="/blog/2013/03/07/UI-Antipatterns-Hinting-instead-of-acting.html"/>
+    <id>/blog/2013/03/07/UI-Antipatterns-Hinting-instead-of-acting.html</id>
+    <published>2013-03-07T00:00:00Z</published>
+    <updated>2013-03-07T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I’m going to explore more mobile UI antipatterns, starting with what I call “hinting instead of acting”. This is when a UI hints at the proper action a user should have taken, rather than just doing what the user expects.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Google Maps on iOS' src='/images/blog/iOS_Google_maps.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;I love the Google Maps app on iOS (huzzah for public transit directions!), but it employed this antipattern when it launched. When you touched a pin on the map, it caused the bottom of the screen to bounce, hinting that you should swipe upwards to get directions and other options. Why not just open the panel when a user touches the pin?&lt;/p&gt;
+
+&lt;p&gt;I think Google was hoping to train users to swipe first, and borrowed the bouncing-bar trick from Apple. The iOS team got kudos for using this approach on the camera button of the unlock screen. However, it’s a really different use case, because you don’t want to make the camera too easy to trigger on the unlock screen, or you’d end up with a lot of pocket shots on the photo roll. It makes sense for iOS to require the more intensive swipe gesture, to make sure that the action is deliberate.&lt;/p&gt;
+
+&lt;p&gt;However, in the case of Google maps, the user is clearly interacting with the UI in an intentional manner. If enough users make the “mistake” of touching the pin that it warrants a hint, then Google maps should just accept the input request and give the user what they’re asking for. Clearly, the Google Maps app team agreed, and changed the behavior in a subsequent release. Iterative development FTW.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Where else have you seen hinting where action was warranted? What other mobile UI antipatterns have you found? Drop a comment below.&lt;/em&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Design critiques are loaded with BS, and that’s OK</title>
     <link rel="alternate" href="/blog/2013/02/20/design-critiques-are-loaded-with-bs-and-thats-ok.html"/>
@@ -39,6 +60,27 @@
 &lt;p&gt;Of course, there is a danger here. The intuitions that spread most successfully may come from the most effective arguers, rather than the designers with the best taste. But there really isn’t another mechanism for sharing intuition, and if designers are cognizant of the pitfalls, we can apply an appropriate filter when accepting feedback from more or less persuasive personalities.&lt;/p&gt;
 
 &lt;p&gt;I’d love to hear other designers thoughts and experiences with critique. Have you ever been caught without justification for your intuition? Has anyone ever changed your mind about one of your own designs?&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>What is a UI antipattern?</title>
+    <link rel="alternate" href="/blog/2012/12/20/What-is-a-UI-antipattern.html"/>
+    <id>/blog/2012/12/20/What-is-a-UI-antipattern.html</id>
+    <published>2012-12-20T00:00:00Z</published>
+    <updated>2012-12-20T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I kicked off this series of posts without really delving into what qualifies as a UI antipattern. I was talking about my UI antipatterns posts with a couple of developer friends at Braintree, and one commented that “it’s fun to point out when people are doing it wrong online”. I wouldn’t disagree, but just because some site is doing it wrong, doesn’t mean it’s an antipattern. Sometimes it’s just crappy design, or total lack of design.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Mosaic pattern' src='/images/blog/pattern.jpg' /&gt;&lt;/p&gt;
+
+&lt;p&gt;To qualify as an antipattern, it has to be a repeated pattern that appears to be beneficial at first, but turns out to create more unintended problems. Additionally, a better answer to the problem has to exist and be documentable and repeatable.&lt;/p&gt;
+
+&lt;p&gt;In all the posts I’m tackling as part of the UI antipatterns series, I’m trying to sympathize with the original intent of the design and offer a better alternative - not just point out the flaws.&lt;/p&gt;
+
+&lt;p&gt;I’m also choosing to deal with antipatterns mostly at the user interface (UI) level, rather than at the broader level of user experience (UX). There might be plenty of antipatterns to mine out of the user experience, but I’ll leave that to a later time.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What UI antipatterns do you see on the web or on your mobile device? If you have one that you think is worth exploring, please let me know and I’ll writ it up here.&lt;/em&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>UI Antipatterns: Repeat Data Collection</title>
@@ -112,69 +154,5 @@
 &lt;p&gt;&lt;img alt='Quantum' src='/images/blog/deal_quantum.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;What is to be done about this? Not much. Most sales and business development people know enough to try to skip the lawyers, or to at least get contracts in front of them as as early in the process as possible. For development teams, it’s best to realize that completing a deal is a lot like fixing a pernicious bug - it’s almost impossible to predict how long it will take. Embrace the truth that the deal is done when that particle randomly pops out the other side of the box and both sides put ink on paper.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>How to get designers to make your open source project awesome</title>
-    <link rel="alternate" href="/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html"/>
-    <id>/blog/2012/09/16/how-to-get-designers-to-make-your-open-source-project-awesome.html</id>
-    <published>2012-09-16T00:00:00Z</published>
-    <updated>2012-09-16T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Like many designers, I use open source software, believe in the open source ethos, and would love to help make open source software look better and be easier to use. A lot of open-source projects are focused on the back-end, and don’t require a ton of UI/UX design, but it seems that there are more web apps popping up these days.&lt;/p&gt;
-
-&lt;p&gt;I had the good fortune to get involved with the Brainiac project recently, and wanted to share some of the hurdles I faced as a designer getting involved in the project. If you can address these things on your open source project, you stand a much better chance of getting designers and front-end developers to contribute.&lt;/p&gt;
-
-&lt;h3 id='make_it_easy_to_install'&gt;Make it easy to install&lt;/h3&gt;
-
-&lt;p&gt;A lot of designers can hack CSS and HTML, and even work with layouts in various frameworks like Rails. However, to start working with those parts of your app, they have to get the entire thing to boot up locally. Make it easy, and offer step-by-step instructions. When I started working on Brainiac, I asked a developer “How do I get this running?”, to which he replied “oh, it’s a Leiningen app”. That didn’t mean anything to me, and left me feeling embarrassed about asking further questions. What I really needed was for him to lay out the handful of steps necessary to get the server running locally. I did get these for Brainiac, and then I added them to the project’s readme.&lt;/p&gt;
-
-&lt;h3 id='be_a_pal'&gt;Be a Pal&lt;/h3&gt;
-
-&lt;p&gt;If a designer takes an interest in your project, be a friend. Help them with technical issues. Figure out which dev tasks are blocking them. Great product companies have designers working side-by-side with developers to collaborate. When the designer or front-end dev gets stuck on something technical, they can call on a more-technical developer to help them get unstuck. I can see how this is tricky for highly distributed development projects, which brings me to the next point.&lt;/p&gt;
-
-&lt;h3 id='keep_discussions_accessible'&gt;Keep Discussions Accessible&lt;/h3&gt;
-
-&lt;p&gt;Use GitHub Issues for project discussions. This will keep discussions accessible to everyone, which is important, because designers need a channel for requesting features and posting comps. IRC WTF? That was my reaction after downloading the very cool Brackets project, and attempting to contribute. Their thorough installation instructions made it a breeze to install, but their project readme directed me to Freenode’s home page for Q&amp;amp;A. From there, I had no idea how to get onto the #brackets channel. Even though I’m aware that IRC is for chat, I wasn’t sure if I needed a client program or if it should work in my browser, and lost interest before I spent the time to figure it out. More explicit instructions for how to get going on the #brackets IRC channel would have helped here.&lt;/p&gt;
-
-&lt;p&gt;Make sure your views don’t require a CS degree to edit&lt;/p&gt;
-
-&lt;p&gt;Designers are getting more technical all the time, but you still need build your app in a way that takes designers into account. HTML, CSS, and (to a lesser extant) Javascript are the lingua franca of UI design. There’s certainly nothing wrong with working some SCSS into the mix, but when you start using using a lot of the backend programming language (i.e. Ruby/Java/Clojure) in your views, you’re turning a markup exercise into a programming excercise. You’ll lose a huge chunk of potential contributors, right out of the gates. Even the ones who soldier on and try to learn the language will find themselves stuck often. If they don’t have a pal (see above) they are likely to give up.&lt;/p&gt;
-
-&lt;p&gt;Wrapping up&lt;/p&gt;
-
-&lt;p&gt;My first foray into open source software development has been tremendously gratifying. Despite a hitting a few roadblocks, I’ve learned a ton, and have helped a great new product enter the world. I’m looking forward to continuing my involvement with Brainiac, as well as finding new projects to work on.&lt;/p&gt;
-
-&lt;p&gt;I’m interested in hearing from anyone who knows of projects that have done a good job engaging with designers, and I would love to hear from other designers who have waded into the open source world. Please comment below, or find me at michael@michaelboeke.com or @mvboeke.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>UI Anti-patterns: mixing status and action</title>
-    <link rel="alternate" href="/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html"/>
-    <id>/blog/2012/07/31/ui-anti-patterns-mixing-status-and-action.html</id>
-    <published>2012-07-31T00:00:00Z</published>
-    <updated>2012-07-31T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;One of the things I’d like to explore on this blog are some of the common UI anti-patterns I see while designing software.&lt;/p&gt;
-
-&lt;p&gt;For example take a look at this picture from the very cool Jukebox 2 open source project. At a glance, it looks like most of the accounts are disabled.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt='Users' src='/images/blog/users.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;Surprise! The reverse is actually true. The problem is that the UI control for disabling an account seems to be displaying its state. This is totally confusing for the viewer, because it’s actually showing the state the account will be in once the users clicks the button.&lt;/p&gt;
-
-&lt;p&gt;I’m not trying to pick on the folks who contributed to Jukebox 2, as I’ve seen this same anti-pattern pop up on almost every project I’ve worked on that features tables with actions. The consequences for the user can be pretty drastic - in one instance when this anti-pattern was used for setting access permissions on a site with sensitive personal information, a user freaked out and locked everyone out of the site.&lt;/p&gt;
-
-&lt;p&gt;So what’s the better way to handle this? Much of the time, the action is a binary flag, so an On/Off switch is a natural metaphor. It can convey current state explicitly without the need to even display the action, since its implied by the very nature of the switch. The above example might look something like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt='Switches' src='/images/blog/switches.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;That’s better, but we could help the viewer to better understand which users are enabled at a glance. In order to avoid confusion, we’ll use some styling on the row to signify a disabled user with gray text and a desaturated avatar photo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt='Disabled users' src='/images/blog/disabled_users.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;That’s a big improvement in usability, without a lot of development work. The next time you find yourself adding and “Actions” column to a table, do your users a favor and give this a try.&lt;/p&gt;</content>
   </entry>
 </feed>
