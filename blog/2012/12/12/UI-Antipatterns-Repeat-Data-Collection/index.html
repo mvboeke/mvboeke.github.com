@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+  <script src="javascripts/modernizr.foundation.js"></script>
+</head>
+
+<body id="">
+<!-- Nav Bar -->
+<div class="header-bar">
+  <div class="row">
+    <div class="small-12 large-8 small-centered columns">
+      <ul class="nav-bar">
+        <li class=""><a href="/">Writing</a></li>
+        <li class="b-spacer "><a href="/events">Events</a></li>
+        <li class=""><a href="#">Work</a></li>
+        <li class=""><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="racing-stripes"></div>
+<div class="flying-b-ring">
+  <div class="flying-b"><a href="/">B</a></div>
+</div>
+<!-- End Nav --><div class="row">
+    <!-- Main Blog Content -->
+    <div class="small-12 large-8 small-centered columns" role="content">
+
+      <article id="article-page">
+	<h2>UI Antipatterns: Repeat Data Collection</h2>
+	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on 2012-12-12</h6>
+	<p>This is an antipattern I’ve come across many times while working on financial software. It often occurs when a website is trying to present one form that will map to multiple systems, or will be used to replicate a physical form (e.g. a credit application). Few things are more frustrating to a user than having to fill out the same data multiple times. It adds no value, increases the likelihood of error, and causes people to tear their hair out.</p>
+
+<p>For example, let’s take a look at the <a href='http://www.active.com/framed/event_detail.cfm?EVENT_ID=2066969&amp;RESET=0&amp;CHECKSSO=0'><em>Active.com signup for the Shamrock Shuffle</em></a> (a great springtime running race in Chicago). It starts off with just a few questions about my age. Thankfully, it calculates my age for me, based on my birthdate, but it won’t infer that I’m older than 16.</p>
+
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection1.gif' /></p>
+
+<p>As I get to this next section, they’re asking for my birthdate again. They ask my age again too…except this time they don’t calculate it for me.</p>
+
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection2.gif' /></p>
+
+<p>Finally, when I get to step three, they ask me one more time if I’m 16 years or older, even though I’ve answered this very question already, and have given them my age and birthdate…twice. Yep, I’m still over 16!</p>
+
+<p><img alt='Repeat data collection' src='/images/blog/repeat_data_collection3.gif' /></p>
+
+<p>This redundancy is particularly frustrating for those of us who make software. We know it’s possible for the software to map one answer into multiple fields. When you have to collect a lot of data from a user, it’s easy to get focused on where the data is eventually going to live (e.g. in a form or another system) but if you want people to complete your form, you have to focus on the user instead.</p>
+</article>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'persistenceofvision'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <div id="mini-bio" class="row">
+	<div class="small-8 small-centered columns">
+		<div class="portrait-ring"><div class="portrait"/></div></div>
+		<p class="short-bio">
+			<a href="#">Michael Boeke</a> is a designer, product guy, and startup veteran, who currently designs and manages products at online payments company <a href="https://www.braintreepayments.com">Braintree</a>.
+		</p>
+	</div>	
+</div>
+
+
+    </div>
+</div>
+<!-- Footer -->	
+<div class="racing-stripes"></div>
+<footer> 
+	<div class="row">
+    	<div class="small-7 small-centered columns">
+        	<ul class="nav-bar">
+            	<li><a href="/">Writing</a></li>
+            	<li><a href="/events">Events</a></li>
+            	<li><a href="#">Work</a></li>
+            	<li><a href="/about">About</a></li>
+				<li>
+					<a href="https://twitter.com/mvboeke"><img class="contact-image" src="/images/twitter-button.png" /></a>
+					<a href="http://www.linkedin.com/in/michaelboeke"><img class="contact-image" src="/images/linkedin-button.png" /></a>
+					<a href="mailto:michael@michaelboeke.com"><img class="contact-image" src="/images/email-button.png" /></a>
+				</li>
+          	</ul>
+      	</div>
+	</div>
+</footer>
+<!-- End Footer --></body>
+
+</html>
