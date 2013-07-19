@@ -33,27 +33,25 @@
     <div class="small-12 large-8 small-centered columns" role="content">
 
       <article id="article-page">
-	<h2>UI Anti-patterns: mixing status and action</h2>
-	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on July 31, 2012</h6>
-	<p>One of the things I’d like to explore on this blog are some of the common UI anti-patterns I see while designing software.</p>
+	<h2>Mobile web apps: Performance isn't everything</h2>
+	<h6>Hand crafted by <a href="/about">Michael Boeke</a> on July 16, 2013</h6>
+	<p>Recently, Drew Crawford&#8217;s excellent article <a href='http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/'><em>Why Mobile Web Apps are Slow</em></a> got a lot of attention on the intertweets. It is a worthwhile read, and I recommend it.</p>
 
-<p>For example take a look at this picture from the very cool Jukebox 2 open source project. At a glance, it looks like most of the accounts are disabled.</p>
-<img alt='Jukebox users table' class='blog-image' src='/images/blog/users.png' />
-<p>Surprise! The reverse is actually true. The problem is that the UI control for disabling an account seems to be displaying its state. This is totally confusing for the viewer, because it’s actually showing the state the account will be in once the users clicks the button.</p>
+<p>As someone who has been a proponent of the open web and HTML5 apps, I have to admit to participating in some of the blind booster-ism the author identifies at the beginning of the article. While some of the technical discussion in the piece is beyond my expertise, I find it to be a pretty compelling argument against my default position.</p>
 
-<p>I’m not trying to pick on the folks who contributed to Jukebox 2, as I’ve seen this same anti-pattern pop up on almost every project I’ve worked on that features tables with actions. The consequences for the user can be pretty drastic - in one instance when this anti-pattern was used for setting access permissions on a site with sensitive personal information, a user freaked out and locked everyone out of the site.</p>
+<p>But while I can&#8217;t dispute his arguments for the advantages of native apps, I can&#8217;t agree completely with Crawford&#8217;s conclusion. Basically he makes a super-compelling argument for why native apps are faster than mobile web apps (and will likely remain faster) and then concludes that people shouldn&#8217;t create mobile web apps. I think what he ignores is that web apps can achieve <em>perceived</em> performance on a par with native apps in many cases. There are apps out there that prove it is possible to create beautiful, responsive, web apps on current hardware. </p>
 
-<p>So what’s the better way to handle this? Much of the time, the action is a binary flag, so an On/Off switch is a natural metaphor. It can convey current state explicitly without the need to even display the action, since its implied by the very nature of the switch. The above example might look something like this:</p>
-<img alt='Switches added to users table' class='blog-image' src='/images/blog/switches.png' />
-<p>That’s better, but we could help the viewer to better understand which users are enabled at a glance. In order to avoid confusion, we’ll use some styling on the row to signify a disabled user with gray text and a desaturated avatar photo.</p>
-<img alt='Disabled users are grayed out' class='blog-image' src='/images/blog/disabled_users.png' />
-<p>That’s a big improvement in usability, without a lot of development work. The next time you find yourself adding and “Actions” column to a table, do your users a favor and give this a try.</p>
+<p>For two good examples, check out <a href='Forecast.io'><em>Forecast.io</em></a> on an iPhone 5 or the <a href='app.ft.com'><em>Financial Times</em></a> app on a current-generation iPad. The producers of those apps traded some ultimate performance away, but didn&#8217;t really have to compromise user experience (at least for current-generation devices). They gained some substantial advantages by doing so: writing one app for multiple platforms, updating apps automatically, avoiding the App Store tax, and more. The folks behind Forecast.io even published a great article about <a href='http://blog.forecast.io/its-not-a-web-app-its-an-app-you-install-from-the-web/'><em>how to build mobile web apps</em></a> that <em>feel</em> native.</p>
+
+<p>One of the other advantages that web apps have, is the ability to provide a great user experience within the web view of another app. When you link to something within Twitter, or search using the Google app on the iPhone, you&#8217;re going to end up at the web view. GitHub points to this very use case in their recent blog post.</p>
+
+<p>I&#8217;m certainly not claiming that people shouldn&#8217;t make native apps. Most of the apps I love are native apps. However, I think most products would best serve their customers by providing an excellent mobile web experience to complement their apps. I&#8217;m curious to watch the Mozilla folks and others push the boundaries of modern mobile web apps, where performance will be the primary challenge. There is much to be gained by continuing down that path, despite the challenges.</p>
 </article>
 <div class="tag-row">More about  
     
-        <a href="/blog/tags/design/">design</a></a>, 
+        <a href="/blog/tags/mobile/">mobile</a></a>, 
     
-        <a href="/blog/tags/antipatterns/">antipatterns</a></a>
+        <a href="/blog/tags/html-5/">HTML 5</a></a>
     
 </div>
     <div id="disqus_thread"></div>

@@ -5,10 +5,31 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-03-07T00:00:00Z</updated>
+  <updated>2013-07-16T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Mobile web apps: Performance isn't everything</title>
+    <link rel="alternate" href="/blog/2013/07/16/mobile-web-app-performance-isnt-everything/"/>
+    <id>/blog/2013/07/16/mobile-web-app-performance-isnt-everything/</id>
+    <published>2013-07-16T00:00:00Z</published>
+    <updated>2013-07-16T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Recently, Drew Crawford&amp;#8217;s excellent article &lt;a href='http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/'&gt;&lt;em&gt;Why Mobile Web Apps are Slow&lt;/em&gt;&lt;/a&gt; got a lot of attention on the intertweets. It is a worthwhile read, and I recommend it.&lt;/p&gt;
+
+&lt;p&gt;As someone who has been a proponent of the open web and HTML5 apps, I have to admit to participating in some of the blind booster-ism the author identifies at the beginning of the article. While some of the technical discussion in the piece is beyond my expertise, I find it to be a pretty compelling argument against my default position.&lt;/p&gt;
+
+&lt;p&gt;But while I can&amp;#8217;t dispute his arguments for the advantages of native apps, I can&amp;#8217;t agree completely with Crawford&amp;#8217;s conclusion. Basically he makes a super-compelling argument for why native apps are faster than mobile web apps (and will likely remain faster) and then concludes that people shouldn&amp;#8217;t create mobile web apps. I think what he ignores is that web apps can achieve &lt;em&gt;perceived&lt;/em&gt; performance on a par with native apps in many cases. There are apps out there that prove it is possible to create beautiful, responsive, web apps on current hardware. &lt;/p&gt;
+
+&lt;p&gt;For two good examples, check out &lt;a href='Forecast.io'&gt;&lt;em&gt;Forecast.io&lt;/em&gt;&lt;/a&gt; on an iPhone 5 or the &lt;a href='app.ft.com'&gt;&lt;em&gt;Financial Times&lt;/em&gt;&lt;/a&gt; app on a current-generation iPad. The producers of those apps traded some ultimate performance away, but didn&amp;#8217;t really have to compromise user experience (at least for current-generation devices). They gained some substantial advantages by doing so: writing one app for multiple platforms, updating apps automatically, avoiding the App Store tax, and more. The folks behind Forecast.io even published a great article about &lt;a href='http://blog.forecast.io/its-not-a-web-app-its-an-app-you-install-from-the-web/'&gt;&lt;em&gt;how to build mobile web apps&lt;/em&gt;&lt;/a&gt; that &lt;em&gt;feel&lt;/em&gt; native.&lt;/p&gt;
+
+&lt;p&gt;One of the other advantages that web apps have, is the ability to provide a great user experience within the web view of another app. When you link to something within Twitter, or search using the Google app on the iPhone, you&amp;#8217;re going to end up at the web view. GitHub points to this very use case in their recent blog post.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m certainly not claiming that people shouldn&amp;#8217;t make native apps. Most of the apps I love are native apps. However, I think most products would best serve their customers by providing an excellent mobile web experience to complement their apps. I&amp;#8217;m curious to watch the Mozilla folks and others push the boundaries of modern mobile web apps, where performance will be the primary challenge. There is much to be gained by continuing down that path, despite the challenges.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>UI Antipatterns: Hinting instead of acting</title>
     <link rel="alternate" href="/blog/2013/03/07/UI-Antipatterns-Hinting-instead-of-acting/"/>
@@ -119,24 +140,5 @@
 &lt;p&gt;This particular antipattern shows up in more situations than just phone number fields. Social Security Numbers and other places where sites collect numbers that include dashes or other formatting are prone to fall into the same trap.&lt;/p&gt;
 
 &lt;p&gt;A single field is more natural for a user, and utilizing Javascript to format the field as the user types will ensure that it is formatted as expected for both the user and the server.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Sales Timelines Explained for Geeks</title>
-    <link rel="alternate" href="/blog/2012/11/01/sales-timelines-explained-for-geeks/"/>
-    <id>/blog/2012/11/01/sales-timelines-explained-for-geeks/</id>
-    <published>2012-11-01T00:00:00Z</published>
-    <updated>2012-11-01T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;When we were first starting up Backstop, we would watch eagerly as each new customer advanced through the sales pipeline, and tear our hair out as deals seemed to drag on forever. Years later, I still hear the development teams I work with at Braintree asking ”when will deal X be done?” So, I thought it might be useful to write down this explanation I came up with for that early Backstop dev team.&lt;/p&gt;
-
-&lt;p&gt;The best way for a geek to understand the situation is to think about the deal as an entity with a dual quantum nature, similar to light. It possess both the linear characteristics of a wave and some decidedly non-linear characteristics that suggest a particle nature.&lt;/p&gt;
-
-&lt;p&gt;In the early or middle phases of deal negotiation, things progress along a fairly linear and predictable path. All parties involved agree that they are headed for completion at a reasonably forseeable date.&lt;/p&gt;
-&lt;img alt='Deal moving forward' class='blog-image' src='/images/blog/deal_moving.png' /&gt;
-&lt;p&gt;However, near the end of the deal negotiation process, lawyers, bosses, procurement departments and other gatekeepers get involved. You can think about these gatekeepers as a reflective box with a diffraction grate on both sides. The wave-like deal hits the first diffraction grating, and it appears as if it should emerge out of the other side at a predictable point in time. However, once the gatekeepers get involved everything goes quantum. The deal takes on a particle nature, and those particles bounce around inside the box for an indeterminate duration, until one of them happens pop out of the slit on the other side. This is effectively random and can’t be predicted by any of the parties involved, much to the chagrin of everyone whose livelihood depends on the deal.&lt;/p&gt;
-&lt;img alt='Deal going quantum' class='blog-image' src='/images/blog/deal_quantum.png' /&gt;
-&lt;p&gt;What is to be done about this? Not much. Most sales and business development people know enough to try to skip the lawyers, or to at least get contracts in front of them as as early in the process as possible. For development teams, it’s best to realize that completing a deal is a lot like fixing a pernicious bug - it’s almost impossible to predict how long it will take. Embrace the truth that the deal is done when that particle randomly pops out the other side of the box and both sides put ink on paper.&lt;/p&gt;</content>
   </entry>
 </feed>
