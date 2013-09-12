@@ -49,7 +49,13 @@
 
   <h6>September 10, 2013</h6>
   <h2><a href="/blog/2013/09/10/Self-hosting-Google-web-fonts/">Self-hosting Google web fonts</a></h2>
-  <p>When using web fonts from <a href="http://www.google.com/fonts">Google Fonts</a>, it generally makes sense to take advantage of the files hosted on Google’s CDN. However, there are legitimate reasons to host fonts yourself sometimes. If you need to keep your tinfoil hat on at all times, because...</p>
+  <p>When using web fonts from <a href='http://www.google.com/fonts'>Google Fonts</a>, it generally makes sense to take advantage of the files hosted on Google’s CDN. However, there are legitimate reasons to host fonts yourself sometimes. If you need to keep your tinfoil hat on at all times, because your site attracts bad guys, you may not want to take the risk of running code from a third party, even one as respected and august as The Google. That is indeed the case at Braintree, where we decided to host fonts on our own servers.</p>
+
+<p>So we downloaded the TTF files from Google Fonts, and ran them through Font Squirrel’s <a href='http://www.fontsquirrel.com/tools/webfont-generator'>web font generator</a> to get a bulletproof font stack. Everything looked brilliant on the the Mac, but the font rendering was corrupted on both Chrome and Firefox on Windows.</p>
+
+<h4 id='all_woffs_are_not_created_equal'>All WOFFs are not created equal</h4>
+<img alt='Comparing Google Fonts WOFF files on Windows Chrome' class='blog-image' src='/images/blog/woff-comparison.png' />
+<p>
   <p class="continue-link">
     <a href="/blog/2013/09/10/Self-hosting-Google-web-fonts/">Continue reading →</a>
   </p>

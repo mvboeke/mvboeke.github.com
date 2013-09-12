@@ -24,6 +24,8 @@
 
 &lt;h4 id='all_woffs_are_not_created_equal'&gt;All WOFFs are not created equal&lt;/h4&gt;
 &lt;img alt='Comparing Google Fonts WOFF files on Windows Chrome' class='blog-image' src='/images/blog/woff-comparison.png' /&gt;
+&lt;p&gt;&lt;/p&gt;
+
 &lt;p&gt;After much experimentation I tried using the Google-hosted version and it looked correct on Windows. I was puzzled because on both operating systems, Chrome was using the same WOFF file from our server. But with a bit of digging, I found that the Google Fonts API serves a different WOFF file to Chrome/Windows than it does to Chrome/OSX. So I downloaded the WOFF file that Google serves up to Chrome/Windows and added that to our site’s assets. It renders well across all major browsers and operating systems.&lt;/p&gt;
 
 &lt;p&gt;The lesson learned here: download the Chrome/Windows WOFF from Google Fonts if you want to host it yourself.&lt;/p&gt;
