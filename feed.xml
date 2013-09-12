@@ -5,10 +5,31 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-07-16T00:00:00Z</updated>
+  <updated>2013-09-10T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Self-hosting Google web fonts</title>
+    <link rel="alternate" href="/blog/2013/09/10/Self-hosting-Google-web-fonts/"/>
+    <id>/blog/2013/09/10/Self-hosting-Google-web-fonts/</id>
+    <published>2013-09-10T00:00:00Z</published>
+    <updated>2013-09-10T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;When using web fonts from &lt;a href='http://www.google.com/fonts'&gt;Google Fonts&lt;/a&gt;, it generally makes sense to take advantage of the files hosted on Google’s CDN. However, there are legitimate reasons to host fonts yourself sometimes. If you need to keep your tinfoil hat on at all times, because your site attracts bad guys, you may not want to take the risk of running code from a third party, even one as respected and august as The Google. That is indeed the case at Braintree, where we decided to host fonts on our own servers.&lt;/p&gt;
+
+&lt;p&gt;So we downloaded the TTF files from Google Fonts, and ran them through Font Squirrel’s &lt;a href='http://www.fontsquirrel.com/tools/webfont-generator'&gt;web font generator&lt;/a&gt; to get a bulletproof font stack. Everything looked brilliant on the the Mac, but the font rendering was corrupted on both Chrome and Firefox on Windows.&lt;/p&gt;
+
+&lt;h4 id='all_woffs_are_not_created_equal'&gt;All WOFFs are not created equal&lt;/h4&gt;
+&lt;img alt='Comparing Google Fonts WOFF files on Windows Chrome' class='blog-image' src='/images/blog/woff-comparison.png' /&gt;
+&lt;p&gt;After much experimentation I tried using the Google-hosted version and it looked correct on Windows. I was puzzled because on both operating systems, Chrome was using the same WOFF file from our server. But with a bit of digging, I found that the Google Fonts API serves a different WOFF file to Chrome/Windows than it does to Chrome/OSX. So I downloaded the WOFF file that Google serves up to Chrome/Windows and added that to our site’s assets. It renders well across all major browsers and operating systems.&lt;/p&gt;
+
+&lt;p&gt;The lesson learned here: download the Chrome/Windows WOFF from Google Fonts if you want to host it yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I’m still not clear on why Google Fonts serves up different WOFF files for Windows and OSX. Does anyone out there know the reason for this?&lt;/em&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Perceived performance is what matters</title>
     <link rel="alternate" href="/blog/2013/07/16/Perceived-performance-is-what-matters/"/>
@@ -119,26 +140,5 @@
 &lt;p&gt;Finally, when I get to step three, they ask me one more time if I’m 16 years or older, even though I’ve answered this very question already, and have given them my age and birthdate…twice. Yep, I’m still over 16!&lt;/p&gt;
 &lt;img alt='Repeat data collection' class='blog-image' src='/images/blog/repeat_data_collection3.gif' /&gt;
 &lt;p&gt;This redundancy is particularly frustrating for those of us who make software. We know it’s possible for the software to map one answer into multiple fields. When you have to collect a lot of data from a user, it’s easy to get focused on where the data is eventually going to live (e.g. in a form or another system) but if you want people to complete your form, you have to focus on the user instead.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>UI Antipatterns: Splitting Numbers</title>
-    <link rel="alternate" href="/blog/2012/11/28/ui-antipatterns-splitting-numbers/"/>
-    <id>/blog/2012/11/28/ui-antipatterns-splitting-numbers/</id>
-    <published>2012-11-28T00:00:00Z</published>
-    <updated>2012-11-28T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;When collecting a US phone number on a web form, it has become convention to collect it with three separate fields. This is meant to help the user successfully input the number in the format the server will accept. Since the user may think of the phone number as one piece of data, rather than three distinct items, many sites employ a feature that jumps the cursor to the next field as soon as it is filled with the expected numbers of characters.&lt;/p&gt;
-&lt;img alt='Split phone number' class='blog-image' src='/images/blog/split_numbers1.png' /&gt;
-&lt;p&gt;This will totally screw up a user like me, who is used to powering through web forms by hammering the tab key as soon as I complete a field. Which leads to the unfortunate situation illustrated below.&lt;/p&gt;
-
-&lt;p&gt;The good folks at Southwest Airlines have tried to help me by moving my cursor to the second field in the phone number, but I’ve already hit the tab key. So I’ve skipped the second field entirely and gone straight to the third. Doh. Hence, an antipattern.&lt;/p&gt;
-
-&lt;p&gt;Luckily, we are living in a grand age of Javascript wizardry. We can now format phone numbers on the fly with plugins like jQuery Format Phone or Masked Input Plugin. We can just let the user enter the number into the field naturally, including or not including special characters as they wish, and format the number for them as they type. The end result might look something like this.&lt;/p&gt;
-&lt;img alt='Auto-formatted phone number' class='blog-image' src='/images/blog/split_numbers2.png' /&gt;
-&lt;p&gt;This particular antipattern shows up in more situations than just phone number fields. Social Security Numbers and other places where sites collect numbers that include dashes or other formatting are prone to fall into the same trap.&lt;/p&gt;
-
-&lt;p&gt;A single field is more natural for a user, and utilizing Javascript to format the field as the user types will ensure that it is formatted as expected for both the user and the server.&lt;/p&gt;</content>
   </entry>
 </feed>
